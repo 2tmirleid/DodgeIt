@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SpawnController : HouseController
 {
+    /*
+    НУЖНО ИСПРАВИТЬ БАГ, ПРИ КОТОРОМ  gravityScale != 4 У ТОГО ДОМА, КОТОРЫЙ ДОЛЖЕН УПАСТЬ. ЭТО ПРИВОДИТ К ТОМУ, ЧТО ПРИ ПОЯВЛЕНИИ НОВЫХ ДОМОВ, ОНИ ВСЕ ВЫСТРАИВАЮТСЯ В ОДНУ ЛИНИЮ
+    ТАКЖЕ, ПОЧЕМУ-ТО, КОГДА ГРАВИТАЦИЯ > 0 ДОМ ВСЕ РАВНО ДВИГАЕТСЯ ПО НЕБОЛЬШОЙ ДИАГОНАЛИ ВНИЗ
+    */
+    
+
     [SerializeField] private GameObject housePrefab;
     private void Start() {
         CreateHouse();
